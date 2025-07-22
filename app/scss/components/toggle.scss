@@ -4,9 +4,12 @@
     border: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: rem(12);
+    grid-template-rows: repeat(2, 1fr);
+    gap: rem(4.8) rem(8);
+    margin: 0;
 
     label {
+        font-size: rem(14);
         &[for="dark"] {
             grid-column: 1 / 2;
             justify-self: end; // could have used text-align: right;
@@ -15,6 +18,7 @@
             grid-column: 1 / 4;
             grid-row: 2 / 3;
             justify-self: center;
+            align-self: start;
         }
         &[for="light"] {
             grid-column: 3 / 4;
@@ -30,7 +34,10 @@
 
     input[type="radio"]{
         opacity: 0;
-        margin: 0;
+        margin: 0 rem(-2) 0 rem(-2);
+        width: rem(24);
+        height: rem(24);
+
     }
 
     &__background {
@@ -53,11 +60,18 @@
         height: rem(18);
         border-radius: 50%;
         background-color: var(--dark-bg);
+        transition: all 150ms ease-in-out;
+    }
+    
+    #light:checked ~ .toggle__button {
+        left: calc(100% - 21px);
+        right: 3px;
+    }
 
-        ~ #light:checked {
-            right: 0;
-            left: 100%;
-        }
+    #system:checked ~ .toggle__button {
+        left: 50%;
+        right: auto;
+        transform: translate(-50%);
     }
 
 }

@@ -2,8 +2,10 @@
 
 .header {
     margin-top: rem(36);
+    display: flex;
+    flex-wrap: wrap;
+
     @include breakpoint(medium) {
-        display: flex;
         justify-content: space-between;
         align-items: center;
     }
@@ -15,10 +17,9 @@
     }
 
     &__title {
-
-    }
-
-    &__toggle {
-
+        width: 100%;
+        @include breakpoint(medium) {
+            width: auto;
+        }
     }
 }
