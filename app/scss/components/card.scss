@@ -1,8 +1,37 @@
 @use '../util' as *;
 
 .card {
+    background: var(--dark-card);
+    color: var(--dark-text1);
+    width: rem(255);
+    text-align: center;
+    padding: rem(25);
+    // this modifier is for the card components top border
+    &--facebook {
+
+    }
+        
+    &--twitter {
+
+    }
+        
+    &--instagram {
+
+    }
+
+    &--youtube {
+
+    }
+
+    &__platform {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: rem(28);
+    }
     
     &__icon {
+        margin-right: rem(8);
 
         &--facebook {
 
@@ -17,6 +46,38 @@
         }
 
         &--youtube {
+
+        }
+    }
+
+    &__username {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    &__count {
+        color: var(--light-bg);
+
+        &--big {
+            font-size: rem(56);
+        }
+
+        &--small {
+
+        }
+    }
+
+    &__label {
+
+    }
+
+    &__change {
+        
+        &--up {
+
+        }
+
+        &--down {
 
         }
     }
