@@ -20,6 +20,12 @@
     border-radius: rem(5);
     position: relative;
     overflow: hidden;
+    transition: background 150ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--dark-card-hover);
+    }
 
     // this modifier is for the card components top border
     &--facebook {
@@ -47,6 +53,11 @@
 
     &--youtube {
         border-top: rem(5) solid var(--youtube);
+    }
+
+    &__subtitle {
+        font-size: rem(14);
+        font-weight: 700;
     }
 
     &__platform {
@@ -99,7 +110,8 @@
         }
 
         &--small {
-
+            font-size: rem(32);
+            font-weight: 700;
         }
     }
 
