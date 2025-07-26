@@ -21,4 +21,12 @@
     --light-card: hsl(227, 47%, 96%);
     --light-text1: hsl(228, 12%, 44%);
     --light-text2: hsl(230, 17%, 14%);
+    --background: var(--light-bg);
+    --text-color: var(--light-text2);
+}
+
+@media (prefer-color-scheme: dark) {
+    :root {
+        background: var(--dark-bg);
+    }
 }
