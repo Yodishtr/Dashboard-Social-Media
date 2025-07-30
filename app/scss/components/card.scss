@@ -13,7 +13,7 @@
 }
 
 .card {
-    background: var(--dark-card);
+    background: var(--card-bg);
     color: var(--dark-text1);
     text-align: center;
     padding: rem(25);
@@ -24,7 +24,7 @@
     cursor: pointer;
 
     &:hover {
-        background: var(--dark-card-hover);
+        background: var(--card-hover);
     }
 
     // this modifier is for the card components top border
@@ -99,7 +99,7 @@
     }
 
     &__count {
-        color: var(--light-bg);
+        color: var(--text-color2);
         font-weight: 700;
         letter-spacing: rem(-2);
         line-height: 1;
